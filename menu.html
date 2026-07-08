@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="estilos.css?v=14">
-<link rel="stylesheet" href="menu.css?v=14">
+<link rel="stylesheet" href="menu.css?v=16">
 </head>
 <body>
 
@@ -81,6 +81,7 @@
       <ul class="nav__lista">
         <li><a href="index.html#servicios">Servicios</a></li>
         <li><a href="menu.html" class="nav__precios" aria-current="page">Precios</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
         <li><a href="index.html#promociones">Promociones</a></li>
         <li><a href="index.html#contacto">Contacto</a></li>
         <li class="nav__item-submenu">
@@ -252,199 +253,26 @@
           <p class="precio-tarjeta__incluye">Incluye lavado y secado</p>
         </article>
       </div>
-
-      <p class="precios__nota reveal">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
-        <span><strong>Secar</strong> la media docena, la docena, las dos docenas o las toallas y sábanas cuesta lo mismo que lavarlas (ej. lavar y secar una docena = $1.50 + $1.50). Los <strong>edredones</strong> ya incluyen lavado y secado en su precio de $3.50.</span>
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ SERVICIOS ADICIONALES ============ -->
-  <section class="seccion" id="servicios-adicionales">
-    <div class="contenedor">
-      <div class="encabezado-seccion reveal">
-        <p class="eyebrow">Servicios adicionales</p>
-        <h2 class="titulo-seccion">Extras que puedes agregar a tu pedido</h2>
-      </div>
-
-      <div class="tarjetas tarjetas--extras">
-        <article class="tarjeta reveal">
-          <span class="tarjeta__icono" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3c4 5 7 8.5 7 12a7 7 0 0 1-14 0c0-3.5 3-7 7-12Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-          </span>
-          <h3>Detergente</h3>
-          <p>Se agrega a tu lavado por <strong>$0.25</strong> adicionales por carga.</p>
-        </article>
-
-        <article class="tarjeta reveal">
-          <span class="tarjeta__icono" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3c4 5 7 8.5 7 12a7 7 0 0 1-14 0c0-3.5 3-7 7-12Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 10v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-          </span>
-          <h3>Suavizante</h3>
-          <p>Se agrega a tu lavado por <strong>$0.25</strong> adicionales por carga.</p>
-        </article>
-
-        <article class="tarjeta reveal">
-          <span class="tarjeta__icono" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 5h11l3 3-1.5 8a2.5 2.5 0 0 1-2.5 2H7a2 2 0 0 1-2-2Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 10h6" stroke="currentColor" stroke-width="1.3"/></svg>
-          </span>
-          <h3>Planchado</h3>
-          <p>Costo adicional de <strong>$4.00 por docena</strong>. Pregúntanos por otras cantidades.</p>
-        </article>
-
-        <article class="tarjeta reveal">
-          <span class="tarjeta__icono" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26"><rect x="2" y="9" width="12" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 12h3.5L20 15v2h-6" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="6.5" cy="18" r="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16.5" cy="18" r="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
-          </span>
-          <h3>Delivery</h3>
-          <p>Recogemos y entregamos tu ropa. <strong>Costo adicional</strong> según la zona.</p>
-        </article>
-      </div>
     </div>
   </section>
 
   <!-- ============ SIMULADOR DE PRECIOS ============ -->
-  <section class="seccion simulador" id="simulador">
-    <div class="contenedor">
-      <div class="encabezado-seccion reveal">
-        <p class="eyebrow">Simulador</p>
-        <h2 class="titulo-seccion">Calcula un precio aproximado</h2>
-        <p class="texto-seccion">Selecciona tus cargas y extras para ver un estimado al momento. Te confirmamos el total exacto por WhatsApp antes de cobrar.</p>
-      </div>
-
-      <div class="simulador__panel reveal">
-        <div class="simulador__controles">
-
-          <div class="simulador__fila" data-tipo="media-docena">
-            <div class="simulador__info">
-              <p class="simulador__nombre">Media docena</p>
-              <p class="simulador__detalle">6 pantalones · $1.50 lavado</p>
-            </div>
-            <div class="simulador__stepper">
-              <button type="button" class="simulador__btn" data-accion="restar" data-tipo="media-docena" aria-label="Quitar una media docena" disabled>−</button>
-              <span class="simulador__cantidad" data-cantidad="media-docena" aria-live="polite">0</span>
-              <button type="button" class="simulador__btn" data-accion="sumar" data-tipo="media-docena" aria-label="Agregar una media docena">+</button>
-            </div>
-            <label class="simulador__check simulador__check--secado">
-              <input type="checkbox" data-secado="media-docena">
-              <span>+ secado ($1.50)</span>
-            </label>
-          </div>
-
-          <div class="simulador__fila" data-tipo="docena">
-            <div class="simulador__info">
-              <p class="simulador__nombre">Docena</p>
-              <p class="simulador__detalle">12 camisetas o shorts delgados · $1.50 lavado</p>
-            </div>
-            <div class="simulador__stepper">
-              <button type="button" class="simulador__btn" data-accion="restar" data-tipo="docena" aria-label="Quitar una docena" disabled>−</button>
-              <span class="simulador__cantidad" data-cantidad="docena" aria-live="polite">0</span>
-              <button type="button" class="simulador__btn" data-accion="sumar" data-tipo="docena" aria-label="Agregar una docena">+</button>
-            </div>
-            <label class="simulador__check simulador__check--secado">
-              <input type="checkbox" data-secado="docena">
-              <span>+ secado ($1.50)</span>
-            </label>
-          </div>
-
-          <div class="simulador__fila" data-tipo="dos-docenas">
-            <div class="simulador__info">
-              <p class="simulador__nombre">Dos docenas</p>
-              <p class="simulador__detalle">24 piezas de ropa interior o de bebé · $1.50 lavado</p>
-            </div>
-            <div class="simulador__stepper">
-              <button type="button" class="simulador__btn" data-accion="restar" data-tipo="dos-docenas" aria-label="Quitar dos docenas" disabled>−</button>
-              <span class="simulador__cantidad" data-cantidad="dos-docenas" aria-live="polite">0</span>
-              <button type="button" class="simulador__btn" data-accion="sumar" data-tipo="dos-docenas" aria-label="Agregar dos docenas">+</button>
-            </div>
-            <label class="simulador__check simulador__check--secado">
-              <input type="checkbox" data-secado="dos-docenas">
-              <span>+ secado ($1.50)</span>
-            </label>
-          </div>
-
-          <div class="simulador__fila" data-tipo="toallas-sabanas">
-            <div class="simulador__info">
-              <p class="simulador__nombre">Toallas y sábanas</p>
-              <p class="simulador__detalle">4 toallas, 4 sábanas delgadas o 2 sábanas gruesas · $1.50 lavado</p>
-            </div>
-            <div class="simulador__stepper">
-              <button type="button" class="simulador__btn" data-accion="restar" data-tipo="toallas-sabanas" aria-label="Quitar una carga de toallas y sábanas" disabled>−</button>
-              <span class="simulador__cantidad" data-cantidad="toallas-sabanas" aria-live="polite">0</span>
-              <button type="button" class="simulador__btn" data-accion="sumar" data-tipo="toallas-sabanas" aria-label="Agregar una carga de toallas y sábanas">+</button>
-            </div>
-            <label class="simulador__check simulador__check--secado">
-              <input type="checkbox" data-secado="toallas-sabanas">
-              <span>+ secado ($1.50)</span>
-            </label>
-          </div>
-
-          <div class="simulador__fila" data-tipo="especiales">
-            <div class="simulador__info">
-              <p class="simulador__nombre">Edredones</p>
-              <p class="simulador__detalle">1 edredón pequeño/mediano o grande · $3.50 con lavado y secado incluidos</p>
-            </div>
-            <div class="simulador__stepper">
-              <button type="button" class="simulador__btn" data-accion="restar" data-tipo="especiales" aria-label="Quitar una carga de edredones" disabled>−</button>
-              <span class="simulador__cantidad" data-cantidad="especiales" aria-live="polite">0</span>
-              <button type="button" class="simulador__btn" data-accion="sumar" data-tipo="especiales" aria-label="Agregar una carga de edredones">+</button>
-            </div>
-          </div>
-
-          <div class="simulador__fila" data-tipo="planchado">
-            <div class="simulador__info">
-              <p class="simulador__nombre">Planchado</p>
-              <p class="simulador__detalle">$4.00 por docena</p>
-            </div>
-            <div class="simulador__stepper">
-              <button type="button" class="simulador__btn" data-accion="restar" data-tipo="planchado" aria-label="Quitar una docena de planchado" disabled>−</button>
-              <span class="simulador__cantidad" data-cantidad="planchado" aria-live="polite">0</span>
-              <button type="button" class="simulador__btn" data-accion="sumar" data-tipo="planchado" aria-label="Agregar una docena de planchado">+</button>
-            </div>
-          </div>
-
-          <div class="simulador__extras">
-            <label class="simulador__check">
-              <input type="checkbox" id="chk-detergente">
-              <span>Detergente <small>+$0.25 por carga</small></span>
-            </label>
-            <label class="simulador__check">
-              <input type="checkbox" id="chk-suavizante">
-              <span>Suavizante <small>+$0.25 por carga</small></span>
-            </label>
-          </div>
-        </div>
-
-        <div class="simulador__resultado">
-          <p class="simulador__resultado-etiqueta">Total aproximado</p>
-          <p class="simulador__resultado-precio"><span>$</span><span id="simulador-total">0.00</span></p>
-          <ul class="simulador__desglose" id="simulador-desglose">
-            <li class="simulador__desglose-vacio">Elige tus cargas para ver el detalle.</li>
-          </ul>
-          <p class="simulador__nota-resultado">
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
-            <span>Precio referencial. El delivery tiene costo adicional según la zona.</span>
-          </p>
-          <a class="btn btn--whatsapp btn--lg" id="simulador-whatsapp" href="https://wa.me/50377712215?text=Hola%2C%20quisiera%20cotizar%20mi%20lavado" target="_blank" rel="noopener">
-            <svg width="18" height="18" aria-hidden="true"><use href="#icono-whatsapp"></use></svg>
-            <span>Confirmar por WhatsApp</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ CTA FINAL ============ -->
   <section class="seccion seccion--alt cta-final" id="cotizar">
     <div class="contenedor cta-final__inner reveal">
       <p class="eyebrow">¿Tienes dudas?</p>
       <h2 class="titulo-seccion">Te confirmamos el total exacto por WhatsApp</h2>
-      <p class="texto-seccion">Cuéntanos cuántas piezas y qué tipo de ropa vas a traer, y te ayudamos a calcular tu pedido antes de que salgas de casa.</p>
-      <a class="btn btn--whatsapp btn--lg" href="https://wa.me/50377712215?text=Hola%2C%20quisiera%20cotizar%20mi%20lavado%3A%20" target="_blank" rel="noopener">
-        <svg width="18" height="18" aria-hidden="true"><use href="#icono-whatsapp"></use></svg>
-        <span>Cotizar mi pedido</span>
-      </a>
+      <p class="texto-seccion">Cuéntanos cuántas piezas y qué tipo de ropa vas a traer, o pruébalo tú mismo con nuestra calculadora y mira un total aproximado al instante.</p>
+      <div class="cta-final__acciones">
+        <a class="btn btn--whatsapp btn--lg" href="https://wa.me/50377712215?text=Hola%2C%20quisiera%20cotizar%20mi%20lavado%3A%20" target="_blank" rel="noopener">
+          <svg width="18" height="18" aria-hidden="true"><use href="#icono-whatsapp"></use></svg>
+          <span>Cotizar mi pedido</span>
+        </a>
+        <a class="btn btn--fantasma btn--lg" href="calculadora.html">
+          <span>Usar la calculadora</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -463,6 +291,7 @@
       <a href="index.html#inicio">Inicio</a>
       <a href="index.html#servicios">Servicios</a>
       <a href="menu.html">Precios</a>
+      <a href="calculadora.html">Calculadora</a>
       <a href="index.html#promociones">Promociones</a>
       <a href="index.html#contacto">Contacto</a>
     </nav>
@@ -490,6 +319,6 @@
 </a>
 
 <script src="script.js?v=14"></script>
-<script src="menu.js?v=14"></script>
+<script src="menu.js?v=15"></script>
 </body>
 </html>
